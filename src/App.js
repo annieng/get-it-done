@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
+import { Button, Card, Row, Col } from 'react-materialize';
 import NewToDo from './NewToDo';
+import ToDoListItem from './ToDoListItem';
 
 // will take in a list of to do items in list form 
 class ToDoApp extends Component {
@@ -85,25 +87,6 @@ class ToDoList extends Component {
           {todoItemsJSX}
         </ul>
       </div>
-    )
-  }
-}
-
-// takes care of each individual to do item
-// each item needs to take a checkbox to see if completed or not
-// each item also needs a checkbox to mark if it is completed and to be checked when completed
-class ToDoListItem extends Component {
-
-  render() {
-    let { todoItem } = this.props
-    return (
-      <li>
-        <input type='checkbox' name='checkbox' checked={todoItem.complete ? true : false}
-          onClick={() => {
-            this.props.toggle(this.props.index)}} >
-        </input>
-          {todoItem.task} 
-      </li>
     )
   }
 }

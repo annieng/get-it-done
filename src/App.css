@@ -27,7 +27,7 @@
 }
 
 .done {
-  text-decoration: strikethrough; 
+  text-decoration: line-through; 
 }
 
 main {
@@ -37,4 +37,12 @@ main {
 
 ul {
   list-style-type: none
+}
+
+.todoitem {
+  text-align: right;
+}
+
+input[type=checkbox]:checked + label.strikethrough {
+  text-decoration: line-through;
 }
